@@ -1,0 +1,57 @@
+html {
+    scroll-behavior: smooth; /* เพิ่มการเลื่อนที่ราบรื่น */
+  }
+.carrenlcp-main {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.carrentallcp{
+    background: rgb(228, 228, 228);
+    max-width: 1213px;
+    width: 100%;
+    height: auto;
+    border-radius: 25px;
+}
+
+.card-carlcp {
+    display: flex;
+    justify-content: center;
+    width: auto;
+    height: auto;
+    padding: 25px;
+    justify-content: space-evenly;
+}
+
+
+@media screen and (max-width: 585px){
+    .card-carlcp {
+        display: inline;
+    }
+    .pic-carlcp {
+        text-align: center;
+    }
+}
+
+.pic-carlcp img{
+    max-width: 390px;
+    max-height: 300px;
+    width: 100%;
+    height: 100%;
+    background: pink;
+}
+
+.carrentallcp-detail {
+    margin-left: 3.5rem;
+    flex-wrap: wrap;
+}
+
+.carrentallcp-detail a {
+    text-decoration: none;
+}
+
+h4 {
+    color: #0f2f76;
+    font-size: 20px;
+}

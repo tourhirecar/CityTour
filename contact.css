@@ -1,0 +1,183 @@
+/* Reset Styles */
+body {
+    margin: 0;
+    font-family: 'Prompt', sans-serif;
+    background-color: #f9f9f9;
+}
+
+/* Contact Card Section */
+.contact-card {
+    background-color: #efefef;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    margin: 30px auto;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Header Box */
+.info-header .blue-box {
+    background-color: #003399;
+    height: 300px;
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 100px;
+}
+
+.blue-box-img {
+    width: 100%;
+    height: 400px;
+    border-radius: 10px;
+}
+
+@media only screen and (max-width: 700px) {
+    .info-header .blue-box {
+        display: flex;
+        height: 150px;
+    }
+    .blue-box-img {
+        display: inline;
+        height: 200px;
+    }
+}
+
+/* Buttons */
+.info-buttons {
+    margin: 15px 0;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.btn {
+    display: inline-block;
+    border: 2px solid transparent;
+    border-radius: 50px;
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 10px 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    background-color: transparent;
+}
+
+
+.btn.pink {
+    border-color: #ff6b6b;
+    color: #ff6b6b;
+}
+
+.btn.green {
+    border-color: #4caf50; /* ขอบสีเขียว */
+    color: #4caf50;       /* ข้อความสีเขียว */
+}
+
+.btn.pink:hover {
+    background-color: #ff6b6b;
+}
+
+.btn.green:hover {
+    background-color: #4caf50;
+}
+.btn:hover {
+    color: white;
+}
+
+/* QR Section */
+.qr-section {
+    margin-top: 20px;
+}
+
+.qr-section h3 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.qr-codes {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.qr-code {
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.qr-code img {
+    max-width: 100%;
+    max-height: 100%;
+    border-radius: 10px;
+}
+.qr-code img {
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* แอนิเมชันสำหรับการขยายและเงา */
+    cursor: pointer; /* เปลี่ยนเป็นมือชี้เมื่อเลื่อนเมาส์ */
+    border-radius: 10px; /* มุมโค้งเล็กน้อย */
+}
+
+/* เมื่อชี้เมาส์บน QR Code */
+.qr-code img:hover {
+    transform: scale(1.1); /* ขยายเล็กน้อย */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2), 0 0 15px rgba(0, 150, 255, 0.7); /* เพิ่มเงาและแสงสีฟ้า */
+    border: 2px solid rgba(0, 150, 255, 0.5); /* เส้นขอบบางพร้อมแสง */
+}
+
+/* ป๊อปอัปพื้นหลัง */
+.popup {
+    display: none; /* ซ่อนป๊อปอัปเริ่มต้น */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+/* เนื้อหาในป๊อปอัป */
+.popup-content {
+    position: relative;
+    max-width: 80%;
+    max-height: 80%;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    text-align: center;
+}
+
+/* รูปภาพในป๊อปอัป */
+.popup-content img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+/* ปุ่มปิด */
+.close-btn {
+    position: absolute;
+    top: 10px; /* ระยะห่างจากขอบบน */
+    right: 10px; /* ระยะห่างจากขอบขวา */
+    font-size: 2rem; /* ขนาดตัวอักษร */
+    color: #fff; /* สีตัวอักษร */
+    background-color: transparent; /* สีพื้นหลังปุ่มโปร่งแสง */
+    border: none; /* ไม่มีกรอบ */
+    cursor: pointer; /* เปลี่ยนเป็นลูกศรมือ */
+    z-index: 10; /* ให้อยู่ด้านหน้าสุด */
+}
+
+.close-btn:hover {
+    color: #ff0000; /* เปลี่ยนสีเมื่อเอาเมาส์ชี้ */
+}
+
+

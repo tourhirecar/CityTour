@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="th">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Tour hire car</title>
+        <link rel="stylesheet" href="content.css">
+        <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="carrenlandscape.css">
+        <link rel="stylesheet" href="contactcard.css">
+        <link rel="stylesheet" href="footer.css">
+        <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500&display=swap" rel="stylesheet">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    </head>
+    
+
+<body>
+    
+    <header>
+        <div class="contact">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <ul class="social-icons">
+                <!-- ไอคอน LINE -->
+                <li><a href="https://line.me/ti/p/[oadzaa885]" target="_blank" class="line"><i
+                            class="fab fa-line"></i></a></li>
+                <!-- ไอคอน WhatsApp -->
+                <li><a href="https://www.whatsapp.com" target="_blank" class="whatsapp"><i
+                            class="fab fa-whatsapp"></i></a></li>
+                <!-- ไอคอน WeChat -->
+                <li><a href="https://www.wechat.com" target="_blank" class="wechat"> <i class="fab fa-weixin"></i></a>
+                </li>
+                <!-- ไอคอน Tel -->
+                <li><a href="tel:0826732162" class="tel"><i class="fas fa-phone-alt"></i></a><a href="tel:0826732162"> โทร:
+                    082-673-2162</a></li>
+            </ul>
+            <div class="bar"></div>
+        </div>
+    </header>
+
+    <!-- Main Navbar -->
+    <nav class="navbar">
+        <div class="bar"></div>
+        <div class="logo">
+            <img src="img/Borcelle_10_x_10_.webp" alt="Logo">
+        </div>
+        <button class="menu-toggle" id="menu-toggle">
+            <i class="fas fa-bars" id="menu-icon"></i>
+        </button>
+        <ul class="nav-links" id="nav-links">
+            <li><a href="index.html">หน้าแรก</a></li>
+            <li><a href="#container-carrenlcp">กิจกรรม</a></li>
+            <li><a href="carrental.html">รถเช่า</a></li>
+            <li><a href="contact.html">ติดต่อเรา</a></li>
+        </ul>
+        <div class="bar"></div>
+    </nav>
+
+    <script src="scripts.js"></script>
+    
+    <main>
+        <!-- Header Image Section -->
+        <header class="ads">
+            <div class="carousel-container1">
+                <div class="carousel1" id="carousel1">
+                  <div class="carousel-item1">
+                    <img src="img/แบรนเนอร์ (2).png" alt="Slide 1">
+                  </div>
+                  <div class="carousel-item1">
+                    <img src="img/a78974ff092af95e.png" alt="Slide 2">
+                  </div>
+                  <div class="carousel-item1">
+                    <img src="img/altis.png" alt="Slide 3">
+                  </div>
+                </div>
+                <div class="carousel-buttons1">
+                  <button class="carousel-button1" id="prevBtn">&#8249;</button>
+                  <button class="carousel-button1" id="nextBtn">&#8250;</button>
+                </div>
+                <div class="carousel-dots1" id="carouselDots"></div>
+            </div>
+        </header>
+    
+        <!-- Buttons Section -->
+        <section class="actions">
+            <a href="tel:0826732162" class="btn minimal red">โทร</a>
+            <a href="https://line.me/ti/p/[oadzaa885]" class="btn minimal green">LINE</a>
+            
+        </section>
+    
+        <!-- Content Section -->
+        <section class="content">
+            <h2>บริการเช่ารถ - City Tour</h2>
+            <p>77 จังหวัดทั่วไทย | 24 ชั่วโมง</p>
+            <h3>เช่ารถทั่วภูมิภาค</h3>
+            <p class="two">บริการครอบคลุมทุกพื้นที่ บรรยากาศทั่วประเทศไทย</p>
+        </section>
+    
+        <!-- Image Grid Section -->
+        <section class="grid">
+            <div class="grid-item" onclick="openPopup('img/เกาะสีชัง.png')"><img src="img/เกาะสีชัง.png" alt="รูปภาพที่ 1"></div>
+            <div class="grid-item" onclick="openPopup('img/ชายหาด.png')"><img src="img/ชายหาด.png" alt="รูปภาพที่ 2"></div>
+            <div class="grid-item" onclick="openPopup('img/น้ำผึ้ง.jpeg')"><img src="img/น้ำผึ้ง.jpeg" alt="รูปภาพที่ 3"></div>
+            <div class="grid-item" onclick="openPopup('img/พัทยา.jpg')"><img src="img/พัทยา.jpg" alt="รูปภาพที่ 4"></div>
+            <div class="grid-item" onclick="openPopup('img/ลักมะยม.jpeg')"><img src="img/ลักมะยม.jpeg" alt="รูปภาพที่ 5"></div>
+            <div class="grid-item" onclick="openPopup('img/สวนน้ำ.png')"><img src="img/สวนน้ำ.png" alt="รูปภาพที่ 6"></div>
+            <div class="grid-item" onclick="openPopup('img/หัวหิน.png')"><img src="img/หัวหิน.png" alt="รูปภาพที่ 7"></div>
+            <div class="grid-item" onclick="openPopup('img/เหวสุวัต.jpg')"><img src="img/เหวสุวัต.jpg" alt="รูปภาพที่ 8"></div>
+        </section>
+        
+        <!-- Popup Overlay -->
+        <div id="popup" class="popup">
+            <span class="close-btn" onclick="closePopup()">&times;</span>
+            <img id="popup-img" class="popup-content" src="" alt="Popup Image">
+        </div>
+    
+        <!-- Final Call-to-action -->
+        <section class="actions">
+            <a href="tel:0826732162" class="btn minimal red">โทร</a>
+        </section>
+        <section class="details-section">
+            <div class="details-text">
+                <h3>เช่ารถทั่วภูมิภาค - City Tour</h3>
+                <p class="info">สามารถติดต่อเช้ารถ รถตู้ รถส่วนบุคคล <span class="info red" style="font-size: x-large;">City Tour</span> เที่ยวได้ทั่วภูมิภาค <span>เช่น</span></p>
+                <ul class="info-list">
+                    <li><span>●</span> กรุงเทพมหานครฯ</li>
+                    <li><span>●</span> ตลาดน้ำ</li>
+                    <li><span>●</span> พัทยา</li>
+                    <li><span>●</span> อยุธยา</li>
+                </ul>
+                <p class="info red">บริการพา Tour รับ - ส่ง <a href="carrental.html">รายละเอียด ....</a></p>
+                <p class="info red"></p>
+            </div>
+            <div class="details-image">
+                <!-- รูปหรือองค์ประกอบที่ต้องการเพิ่ม -->
+                <div class="image-box" onclick="openPopup('img/รถตู้2.jpg')"><img src="img/รถตู้2.jpg" alt="รูปภาพที่ 9"></div>
+            </div>
+        </section>
+    </main>
+    <div class="maindetailcar">
+        <div class="carousel-container">
+            <h2>รถ</h2>
+            <div class="carousel">
+                <button class="carousel-button prev">←</button>
+                <div class="carousel-track-container overflow-hidden">
+                    <ul class="carousel-track">
+                        <li class="carousel-card">
+                            <img src="img/taxi.png" alt="Taxi">
+                            <p class="info red"><a href="carrental.html">รายละเอียด ....</a></p>
+                        </li>
+                        <li class="carousel-card">
+                            <img src="img/fortuner.png" alt="Toyota Fortuner SUV">
+                            <p class="info red"><a href="carrental.html">รายละเอียด ....</a></p>
+                        </li>
+                        <li class="carousel-card">
+                            <img src="img/รถตู้2.jpg" alt="Toyota Van">
+                            <p class="info red"><a href="carrental.html">รายละเอียด ....</a></p>
+                        </li>
+                        <li class="carousel-card">
+                            <img src="img/altis1.png" alt="Toyota Altis">
+                            <p class="info red"><a href="carrental.html">รายละเอียด ....</a></p>
+                        </li>
+                        <li class="carousel-card">
+                            <img src="img/camry.webp" alt="Toyota Camry">
+                            <p class="info red"><a href="carrental.html">รายละเอียด ....</a></p>
+                        </li>
+                        <li class="carousel-card">
+                            <img src="img/toyota_camry.jpg" alt="Toyota Camry 2023">
+                            <p class="info red"><a href="carrental.html">รายละเอียด ....</a></p>
+                        </li>
+                    </ul>
+                </div>
+                <button class="carousel-button next">→</button>
+            </div>
+            <div class="carousel-indicators">
+                <span class="dot active"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+            </div>
+        </div>
+    </div>
+    <div class="container-carrenlcp" id="container-carrenlcp">
+        <div class="carrenlcp-main">
+            <div class="carrentallcp">
+                <div class="card-carlcp">
+                    <div class="carrentallcp-detail">
+                        <h4>เที่ยวหัวหิน</h4>
+                        <p>บริการเช่ารถหัวหินตลอด 24 ชม. </p>
+                        <ul>
+                            <li>- สวนสนประดิพัทธ์</li>
+                            <li>- สวนหลวงราชินี</li>
+                            <li>- ตลาดน้ำหัวหินสามพันนาม</li>
+                        </ul>
+                        <!-- <p><a href=""></a>รายละเอียด......</p> -->
+                    </div>
+                    <div class="pic-carlcp">
+                        <img id="card-carlcp" src="img\หัวหิน.png" alt="">
+                    </div>
+                </div>
+                <div class="card-carlcp">
+                    <div class="pic-carlcp">
+                        <img src="img\ลักมะยม.jpeg" alt="">
+                    </div>
+                    <div class="carrentallcp-detail">
+                        <h4>ตลาดน้ำ</h4>
+                        <p>บริการเช่ารถเที่ยวตลาดน้ำ</p>
+                        <ul>
+                            <li>- ตลาดน้ำคลองลัดมะยม  </li>
+                            <li>- ตลาดน้ำดำเนินสะดวก</li>
+                            <li></li>
+                            <li></li>
+                        </ul>
+                        <!-- <p><a href="http://"></a>รายละเอียด......</p> -->
+                    </div>
+                </div>
+                <div class="card-carlcp">
+                    <div class="carrentallcp-detail">
+                        <h4>พัทยา</h4>
+                        <p>บริการเช่ารถเช้าเที่ยวพัทยา ที่สวย ชายหาดพัทยา</p>
+                        <ul>
+                            <li>- หาดพัทยา</li>
+                            <li>- หาดวงศ์อมาตย์</li>
+                            <li>- หาดจอมเทียน</li>
+                            <li>- ปราสาทสัจธรรม</li>
+                        </ul>
+                        <!-- <p><a href="http://"></a>รายละเอียด.....</p> -->
+                    </div>
+                    <div class="pic-carlcp">
+                        <img src="img\ชายหาด.png" alt="">
+                    </div>
+                </div>
+                <div class="card-carlcp">
+                    <div class="pic-carlcp">
+                        <img src="img\เหวสุวัต.jpg" alt="">
+                    </div>
+                    <div class="carrentallcp-detail">
+                        <h4>เขาใหญ่</h4>
+                        <p>บริการเช่ารถเที่ยวเขาใหญ่ชมธรรมชาติ</p>
+                        <ul>
+                            <li>- Rancho Charnvee Country Club</li>
+                            <li>- อุทยานแห่งชาติเขาใหญ่</li>
+                            <li>- บ่อน้ำผุดเขาใหญ่ เขาใหญ่</li>
+                            <li>- My Ozone Animal Club เขาใหญ่</li>
+                        </ul>
+                        <!-- <p><a href="http://"></a>รายละเอียด......</p> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="contactcard-container">
+        <div class="contactcard-main">
+            <h2>ติดต่อ</h2>
+            <div class="contactcard-container">
+                <div class="card-contact">
+                    <div class="conatcatcard-content">
+                        <p>เบอร์ติดต่อ <i class="fas fa-phone-alt"><a href="tel:0826732162">082-673-2162</a> </i></p>
+                    </div>
+                </div>
+                <div class="card-contact">
+                    <div class="conatcatcard-content">
+                        <p>สามารถติดต่อผ่าน line โดย QR code </p>
+                        <!-- <img src="img\QR line.jpg" alt=""  id="line-img" > -->
+                    </div>
+                </div>
+                <div class="card-contact">
+                    <div class="conatcatcard-content">
+                        <p>tourhirecar@gmail.com<a href="contact.html">รายละเอียด</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="container-footer">
+            <div class="content-footer">
+                <div class="logo">
+                    <img src="img/Borcelle_10_x_10_.webp" alt="Logo">
+                </div>
+                <p>เช่ารถกลับเรา</p>
+            </div>
+            <div class="content-footer">
+                <ul class="list">
+                    <li><a href="index.html">หน้าแรก</a></li>
+                    <li><a href="#container-carrenlcp">กิจกรรม</a></li>
+                    <li><a href="carrental.html">รถเช่า</a></li>
+                    <li><a href="contact.html">ติดต่อ</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="buttom-bar">
+            <p>Tour hire car  จังหวัดกรุงเทพมหานคร </p>
+        </div>
+    </footer>
+    <script src="content.js"></script>
+    <script src="javascript.js"></script>
+</body>
+</html>

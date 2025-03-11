@@ -1,0 +1,308 @@
+body {
+    margin: 0px;
+    font-family: 'Prompt', sans-serif;
+    background: #a6a6a6;
+}
+
+.maindetailcar {
+    background: rgb(112, 112, 112);
+    border-radius: 15px;
+    margin-bottom: 1%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 2%;
+}
+
+h2 {
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+    text-align: center;
+    color: #0f2f76;
+}
+
+/* ------------------- */
+
+.carousel-container1 {
+  position: relative;
+  width: 100%;
+  max-width: 1200px;
+  overflow: hidden;
+  border-radius: 16px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  padding-bottom: 1%;
+}
+.carousel1 {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+.carousel-item1 {
+  min-width: 100%;
+  transition: transform 0.5s ease;
+  display: flex;
+  justify-content: center; /* จัดแนวนอนให้อยู่ตรงกลาง */
+  align-items: center; /* จัดแนวตั้งให้อยู่ตรงกลาง */
+  height: 100%; /* ตั้งความสูงเต็มพื้นที่สไลด์ */
+  position: relative;
+}
+.carousel-item1 img {
+  max-width: 100%; /* ปรับความกว้างของรูปภาพ */
+  max-height: 100%; /* ปรับความสูงของรูปภาพ */
+  object-fit: contain; /* ให้รูปอยู่ในกรอบโดยไม่ถูกตัด */
+}
+.carousel-buttons1 {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  transform: translateY(-50%);
+}
+.carousel-button1 {
+  background-color: rgba(66, 64, 60, 0.8);
+  border: none;
+  color: white;
+  font-size: 24px;
+  padding: 12px;
+  cursor: pointer;
+  border-radius: 50%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  transition: background-color 0.3s;
+}
+.carousel-button1:hover {
+  background-color: rgba(255, 140, 0, 0.9);
+}
+.carousel-dots1 {
+  display: flex;
+  justify-content: center;
+  margin-top: 16px;
+}
+.dot {
+  height: 12px;
+  width: 12px;
+  background-color: #bbb;
+  border-radius: 50%;
+  margin: 0 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+.dot.active {
+  background-color: #ff9f00;
+}
+
+/* ---------------- */
+
+.carousel-track-container {
+  overflow: hidden;
+  width: 100%;
+  position: relative;
+}
+.carousel-track {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+.carousel-card {
+  flex: 0 0 auto;
+  width: 100%;
+  text-align: center;
+  flex: 0 0 calc(100% / 3);
+  padding: 10px;
+  box-sizing: border-box;
+  background-color: #fff;
+  border-radius: 10px;
+  text-align: center;
+  color: #000;
+}
+.carousel-container {
+  width: 90%;
+  max-width: 1000px; /* ขยายขนาดเพื่อรองรับหลายการ์ด */
+  text-align: center;
+}
+.carousel {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  margin: 0 auto;
+}
+.carousel-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+.carousel-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  border: none;
+  color: white;
+  font-size: 2rem;
+  padding: 10px;
+  cursor: pointer;
+  z-index: 2;
+  border-radius: 50%;
+}
+.carousel-button.prev {
+  left: 10px;
+}
+.carousel-button.next {
+  right: 10px;
+}
+.carousel-indicators {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+.dot {
+  height: 10px;
+  width: 10px;
+  margin: 0 5px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  cursor: pointer;
+}
+.dot.active {
+  background-color: #717171;
+}
+
+/* ------------------------ */
+
+@media (max-width: 768px) {
+  .carousel-card {
+    flex: 0 0 100%; /* แสดงการ์ดเดียวในหน้าจอเล็ก */
+  }
+}
+
+  /* pop up func */
+
+  #myImg {
+    border-radius: 15px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  #myImg:hover {
+    opacity: 0.7;
+  }
+  
+  .modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.9);
+  }
+  
+  .modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+  }
+  
+  #caption {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+    color: #ccc;
+    padding: 10px 0;
+    height: 150px;
+  }
+  
+  .modal-content,
+  #caption {
+    animation-name: zoom;
+    animation-duration: 0.6s;
+  }
+  
+  @keyframes zoom {
+    from {
+      transform: scale(0)
+    }
+    to {
+      transform: scale(1)
+    }
+  }
+  
+  .close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+  }
+@media only screen and (max-width: 768px) {
+    .modal-content {
+      width: 100%;
+    }
+    #line-img {
+      width: 100px;
+      text-align: center;
+    }
+    .carousel {
+      scroll-snap-type: x mandatory;
+      overflow-x: auto;
+      display: flex;
+      gap: 16px;
+      width: 300px; /* กำหนดให้พอดีกับ 3 ภาพ (320px * 3) */
+      justify-content: center; /* จัดให้อยู่ตรงกลางในแนวนอน */
+    }
+  }
+  @media (max-width: 768px) {
+    .carousel {
+      gap: 8px;
+    }
+    .carousel-item {
+      flex: 0 0 calc(100% / 1); /* แสดง 1 การ์ดในหน้าจอเล็ก */
+    }
+    .container {
+      padding: 8px;
+    }
+    .button {
+      top: calc(60% - 40px);
+    }
+    .button.right {
+      right: 4%;
+    }
+    .button.left {
+      left: 2%;
+    }
+  }
+  /* pop up func */
+  
+.card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  }
+    
+.nextcar {
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+    text-align: center;
+    letter-spacing: 20px;
+}
+
+.nextbtn {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    
+}
